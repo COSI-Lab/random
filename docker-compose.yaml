@@ -6,8 +6,8 @@ services:
       - 8004:8004
     environment:
       VIRTUAL_PORT: 8004
-      VIRTUAL_HOST: talks.cosi.clarkson.edu,talks.cslabs.clarkson.edu,talks
-      LETSENCRYPT_HOST: talks.cosi.clarkson.edu,talks.cslabs.clarkson.edu
+      VIRTUAL_HOST: random.cosi.clarkson.edu,random.cslabs.clarkson.edu,random
+      LETSENCRYPT_HOST: random.cosi.clarkson.edu,random.cslabs.clarkson.edu
     build:
       context: .
 

@@ -3,9 +3,9 @@ version: "3.9"
 services:
   web:
     ports:
-      - 8004:8004
+      - 8010:8010
     environment:
-      VIRTUAL_PORT: 8004
+      VIRTUAL_PORT: 8010
       VIRTUAL_HOST: random.cosi.clarkson.edu,random.cslabs.clarkson.edu,random
       LETSENCRYPT_HOST: random.cosi.clarkson.edu,random.cslabs.clarkson.edu
     build:

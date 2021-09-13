@@ -20,4 +20,4 @@ FROM rust:slim
 WORKDIR /app
 COPY --from=builder /random/target/release/random random
 COPY static static
-CMD ["./rust_talks"]
+CMD ["./random"]

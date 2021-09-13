@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>COSI Random</title>
+</head>
+
+<body class="content">
+    <h2>
+        Hello, welcome to COSI Random! Have a complementary bit: 
+        <h3>
+            <div id="free_bit" style="height: 1em;"></div>
+        </h3>
+    </h2>
+    <h3>Add a bit to the entropy pool:</h3>
+    <button onClick="send(true)">One</button>
+    <button onClick="send(false)">Zero</button>
+    <h3>
+        Need a bit? Get one here:
+        <div id="bits" style="min-height: 1em;"></div>
+    </h3>
+
+    <button onClick="get_bit(1)">Get bit</button>
+    <button onClick="get_bits(10)">Get bit x10</button>
+    <button onClick="get_bits(100)">Get bit x100</button>
+    <button onClick="get_bits(1000)">Get bit x1000</button>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>

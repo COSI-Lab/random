@@ -33,14 +33,7 @@ async fn bits_api(
 async fn api_get_bits(pool: Arc<Mutex<MSQW>>) -> Result<Response<Body>> {
     // always return a u32
     let bits = format!("{:032b}", pool.lock().await.update());
-
-    let response = Response::builder()
-        .status(200)
-        .header("Content-Type", "application/text")
-        .body(bits.into())
-        .unwrap();
-
-    Ok(response)
+    Ok(Response::new(bits.into()))
 }
 
 async fn api_post_zero(pool: Arc<Mutex<MSQW>>) -> Result<Response<Body>> {
@@ -74,7 +67,7 @@ fn not_found() -> Response<Body> {
 
 #[tokio::main]
 async fn main() {
-    let addr = ([127, 0, 0, 1], 3000).into();
+    let addr = ([0, 0, 0, 0], 3000).into();
 
     let pool =  Arc::new(Mutex::new(MSQW::new()));
     let pool = &*Box::leak(Box::new(pool));
